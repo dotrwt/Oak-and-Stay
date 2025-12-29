@@ -12,32 +12,22 @@ router.use(methodOverride('_method'));
 //Needed to read form data
 router.use(expres.urlencoded({ extended: true }));
 
-
-//Index route
-router.get ('/', wrapAsync(listingController.index));
-
+//Index and Create route
+router.route('/')
+.get (wrapAsync(listingController.index))
+.post(validateListing, isLoggedIn, wrapAsync(listingController.createListing));
 
 //New route
 router.get('/new', isLoggedIn, listingController.renderNewForm);
 
-
-//Show route
-router.get('/:id', wrapAsync(listingController.showListing));
-
-
-//Create route
-router.post('/', validateListing, isLoggedIn, wrapAsync(listingController.createListing));
+//Show, Update and Delete route
+router.route('/:id')
+.get(wrapAsync(listingController.showListing))
+.put(isLoggedIn, isOwner,wrapAsync(listingController.updateListing))
+.delete(isLoggedIn, isOwner, wrapAsync(listingController.deleteListing));
 
 
 //Edit route 
 router.get('/:id/edit', validateListing, isLoggedIn, isOwner, wrapAsync(listingController.renderEditForm));
-
-
-//Update route
-router.put('/:id', isLoggedIn, isOwner,wrapAsync(listingController.updateListing));
-
-
-//Delete route 
-router.delete('/:id', isLoggedIn, isOwner, wrapAsync(listingController.deleteListing));
 
 module.exports = router;
