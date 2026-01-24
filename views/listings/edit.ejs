@@ -6,7 +6,7 @@
 </section>
 
 <section class="form-panel">
-    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" class="stacked-form needs-validation" novalidate >
+    <form method="POST" action="/listings/<%=listing._id%>?_method=PUT" class="stacked-form needs-validation" novalidate enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" id="title" name="listing[title]" value="<%=listing.title%>" required class="form-control" required>
@@ -19,6 +19,12 @@
             <textarea id="description" name="listing[description]" rows="4" required class="form-control"><%=listing.description%></textarea>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Please write a valid description.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" id="image" name="image" class="form-control">
+            <div class="form-text">Upload a new image to replace the current one.</div>
         </div>
 
         <div class="row g-3 align-items-end">

@@ -6,7 +6,7 @@
 </section>
 
 <section class="form-panel">
-    <form method="POST" action="/listings" novalidate class="needs-validation">
+    <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" id="title" name="listing[title]" placeholder="Enter Title" required class="form-control" required>
@@ -23,8 +23,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="image" class="form-label">Image URL</label>
-            <input type="text" id="image" name="listing[image]" placeholder="https://example.com/photo.jpg" class="form-control">
+            <label for="image" class="form-label">Upload Image</label>
+            <input type="file" id="image" name="listing[image]" class="form-control">
         </div>
 
         <div class="row g-3 align-items-end">
