@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="logo/main-logo - copy.png" alt="Oak & Stay Logo" width="120" />
+<img src="https://github.com/dotrwt/Oak-and-Stay/blob/main/logo/main-logo%20-%20Copy.png" alt="Oak & Stay Logo" width="120" />
 
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.x-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
