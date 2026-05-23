@@ -1,8 +1,11 @@
 <% layout('layouts/boilerplate') -%>
-<section class="page-header">
-    <p class="eyebrow">Stay detail</p>
-    <h1 class="page-title"><%= listing.title %></h1>
-    <p class="page-subtitle"><%= listing.location %>, <%= listing.country %></p>
+<section class="page-header d-flex align-items-start gap-3">
+    <button onclick="history.back()" class="btn btn-outline-dark rounded-circle mt-1" style="width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-left"></i></button>
+    <div>
+        <p class="eyebrow">Stay detail</p>
+        <h1 class="page-title"><%= listing.title %></h1>
+        <p class="page-subtitle"><%= listing.location %>, <%= listing.country %></p>
+    </div>
 </section>
 
 <section class="show-card">

@@ -1,8 +1,15 @@
 <% layout('layouts/boilerplate') -%>
 
-<div class="container mt-5">
-    <h1>Sign Up</h1>
-    <form action="/signup" method="POST" class="needs-validation" novalidate>
+<section class="page-header d-flex align-items-start gap-3">
+    <button onclick="history.back()" class="btn btn-outline-dark rounded-circle mt-1" style="width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-left"></i></button>
+    <div>
+        <p class="eyebrow">Join the community</p>
+        <h1 class="page-title">Sign Up</h1>
+    </div>
+</section>
+
+<section class="form-panel" style="max-width: 500px; margin: 0 auto;">
+    <form action="/signup" method="POST" class="needs-validation stacked-form" novalidate>
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" class="form-control" id="username" name="username" required>
@@ -15,7 +22,8 @@
             <label for="password" class="form-label">Password</label>
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <div class="form-actions mt-4">
+            <button type="submit" class="btn btn-dark btn-lg w-100">Sign Up</button>
+        </div>
     </form>
-
-</div>
+</section>

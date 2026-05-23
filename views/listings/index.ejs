@@ -1,12 +1,24 @@
 <% layout('layouts/boilerplate') -%>
-<section class="page-header">
-    <p class="eyebrow">Browse stays</p>
+<section class="home-hero">
+    <div class="home-hero__text">
+        <h1 style="font-family: 'Playfair Display', serif;">Oak and Stay</h1>
+        <p class="lede">Discover unique stays and experiences. Play, relax, and explore handpicked rentals from our vibrant community.</p>
+        <div class="hero-cta">
+            <a class="btn btn-dark btn-lg" href="#listings">Browse Stays</a>
+            <a class="btn btn-outline-dark btn-lg" href="/listings/new">Add a Listing</a>
+        </div>
+    </div>
+    <div class="home-hero__media">
+        <img src="https://images.unsplash.com/photo-1542314831-c6a4d1409362?auto=format&fit=crop&q=80&w=1000" alt="Beautiful Stay" class="home-slide-img w-100">
+    </div>
+</section>
+
+<section class="page-header" id="listings" style="margin-top: 2rem;">
+    <p class="eyebrow">Explore</p>
     <div class="page-header__actions">
         <div>
-            <h1 class="page-title">All Listings</h1>
-            <p class="page-subtitle">Handpicked rentals sourced from our host community.</p>
+            <h2 class="page-title" style="font-family: 'Playfair Display', serif;">All Listings</h2>
         </div>
-        <a class="btn btn-dark btn-lg" href="/listings/new">Add new listing</a>
     </div>
 </section>
 

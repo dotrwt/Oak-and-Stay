@@ -16,4 +16,13 @@
       form.classList.add('was-validated')
     }, false)
   })
+
+  // Auto-dismiss flash messages after 4 seconds
+  const flashMessages = document.querySelectorAll('.alert');
+  flashMessages.forEach(alert => {
+    setTimeout(() => {
+      const bsAlert = new bootstrap.Alert(alert);
+      bsAlert.close();
+    }, 4000);
+  });
 })()

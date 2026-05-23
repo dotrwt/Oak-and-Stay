@@ -17,13 +17,25 @@ body{
 
 .navbar{
     height: 5rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding-inline: 1.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .navbar-brand span{
     font-weight: 700;
     letter-spacing: 0.04em;
+    font-family: "Playfair Display", serif;
+    font-size: 1.25rem;
+}
+
+.brand-logo {
+    transition: transform 0.3s ease;
+}
+.navbar-brand:hover .brand-logo {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .fa-compass{
@@ -41,6 +53,7 @@ body{
 
 .f-info-links a:hover{
     text-decoration: underline;
+    color: #ff385c;
 }
 
 .f-info-socials i{
@@ -81,6 +94,7 @@ body{
 .page-title{
     font-size: clamp(2rem, 4vw, 3rem);
     margin: 0.25rem 0;
+    font-family: "Playfair Display", serif;
 }
 
 .page-subtitle{
@@ -143,6 +157,12 @@ body{
     font-weight: 600;
 }
 
+.listing-card h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+}
+
 .listing-price span{
     font-size: 0.8rem;
     color: #777;
@@ -154,6 +174,12 @@ body{
     background-color: #ff385c !important;
     color: white !important;
     font-weight: 600 !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+.add-btn:hover {
+    background-color: #e31c5f !important;
+    transform: translateY(-2px) !important;
 }
 
 .foot{
