@@ -15,7 +15,7 @@
 
 Oak & Stay is a full-stack rental listing platform where property owners can create and manage listings, and guests can browse, discover, and review unique stays. The application is built on a clean MVC architecture using Node.js and Express on the backend, MongoDB for persistence, and server-rendered EJS templates on the frontend.
 
-Website is live on : <a src='https://rentalmarketplace.onrender.com/'>Oak and Place</a>
+Website is live on : <a href="https://rentalmarketplace.onrender.com/">Live Demo</a>
 
 <img src='https://github.com/dotrwt/Oak-and-Stay/blob/main/OaP_UI.png' alt='Oak and Place UI'>
 
